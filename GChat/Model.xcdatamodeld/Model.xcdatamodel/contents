@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model name="" userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="2061" systemVersion="12E55" minimumToolsVersion="Xcode 4.3" macOSVersion="Automatic" iOSVersion="Automatic">
+    <entity name="ChatMessage" representedClassName="ChatMessage" syncable="YES">
+        <attribute name="date" optional="YES" attributeType="Date" syncable="YES"/>
+        <attribute name="id" optional="YES" attributeType="Integer 32" defaultValueString="0" indexed="YES" syncable="YES"/>
+        <attribute name="sectionDate" optional="YES" attributeType="Date" syncable="YES"/>
+        <attribute name="senderName" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="text" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="type" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="chatRoom" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="ChatRoom" inverseName="messages" inverseEntity="ChatRoom" syncable="YES"/>
+    </entity>
+    <entity name="ChatRoom" representedClassName="ChatRoom" syncable="YES">
+        <attribute name="createDate" optional="YES" attributeType="Date" indexed="YES" syncable="YES"/>
+        <attribute name="id" optional="YES" attributeType="String" indexed="YES" syncable="YES"/>
+        <attribute name="joinDate" optional="YES" attributeType="Date" syncable="YES"/>
+        <attribute name="joinSignature" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="lastReadMessageID" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <attribute name="selfNickname" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="serverAddress" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="shortlink" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="title" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="messages" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="ChatMessage" inverseName="chatRoom" inverseEntity="ChatMessage" syncable="YES"/>
+    </entity>
+    <elements>
+        <element name="ChatMessage" positionX="160" positionY="192" width="128" height="150"/>
+        <element name="ChatRoom" positionX="160" positionY="192" width="128" height="195"/>
+    </elements>
+</model>

@@ -1,0 +1,19 @@
+/* 
+  Localizable.strings
+  Grouvent
+
+  Created by Blankwonder on 12/12/12.
+  Copyright (c) 2012 Suixing Tech. All rights reserved.
+*/
+
+
+"INVITE_PF" = "%@邀请您参加聚会“%@”";
+"TIME_PF" = "聚会“%@”时间改到了%@";
+"LOCATION_PF" = "聚会“%@”地点改到了%@";
+"STATUS_ACCEPT_PF" = "%@接受了您的聚会邀请";
+"STATUS_DECLINE_PF" = "%@拒绝了您的聚会邀请";
+"CHAT_PF" = "聚会“%@”有新消息";
+"UDTIME_PF" = "聚会“%@”的时间修改为待定";
+"UDLOCATION_PF" = "聚会“%@”的地点修改为待定";
+"EXIT_PF" = "%@退出了聚会“%@”";
+"DELETE_PF" = "“%@”聚会已取消";
